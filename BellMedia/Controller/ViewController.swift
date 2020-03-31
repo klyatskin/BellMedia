@@ -21,7 +21,7 @@ extension ViewController {
     @IBAction func buttonTapped(_ sender: UIButton) {
 
         let urlStr = Fetcher.Constants.urlStr
-        NetworkFetcher().fetchData(from: urlStr) { error, data in
+        NetworkFetcher().fetchData(from: urlStr) { [weak self] error, data in
             if error != nil {
                 print("Error: \(String(describing: error))")
                 return
@@ -32,7 +32,7 @@ extension ViewController {
                     if let date = model?.lastModifiedDateTime {
                         timeStr = DateFormatter.output.string(from: date)
                     }
-                    self.alert(title: "Last modified time", message: timeStr)
+                    self?.alert(title: "Last modified time", message: timeStr)
                 }
             }
         }
