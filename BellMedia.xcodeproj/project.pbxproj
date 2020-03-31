@@ -13,6 +13,13 @@
 		D13BABE32432ADAF00D38A36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13BABE12432ADAF00D38A36 /* Main.storyboard */; };
 		D13BABE52432ADB400D38A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13BABE42432ADB400D38A36 /* Assets.xcassets */; };
 		D13BABE82432ADB400D38A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13BABE62432ADB400D38A36 /* LaunchScreen.storyboard */; };
+		D13BABF02432ADF100D38A36 /* Question1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BABEF2432ADF100D38A36 /* Question1.swift */; };
+		D13BABF82432C4D800D38A36 /* StreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BABF72432C4D800D38A36 /* StreamModel.swift */; };
+		D13BAC002432C69C00D38A36 /* DataExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BABFF2432C69C00D38A36 /* DataExtractor.swift */; };
+		D13BAC022432C6B100D38A36 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BAC012432C6B100D38A36 /* NetworkFetcher.swift */; };
+		D13BAC042432C6F000D38A36 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13BAC032432C6F000D38A36 /* Fetcher.swift */; };
+		D18D81E72432DB240063429D /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D81E62432DB240063429D /* DateFormatter.swift */; };
+		D18D81E92432EF710063429D /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = D18D81E82432EF710063429D /* Readme.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		D13BABE42432ADB400D38A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D13BABE72432ADB400D38A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D13BABE92432ADB400D38A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13BABEF2432ADF100D38A36 /* Question1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question1.swift; sourceTree = "<group>"; };
+		D13BABF72432C4D800D38A36 /* StreamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamModel.swift; sourceTree = "<group>"; };
+		D13BABFF2432C69C00D38A36 /* DataExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtractor.swift; sourceTree = "<group>"; };
+		D13BAC012432C6B100D38A36 /* NetworkFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkFetcher.swift; sourceTree = "<group>"; };
+		D13BAC032432C6F000D38A36 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		D18D81E62432DB240063429D /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		D18D81E82432EF710063429D /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		D13BABDA2432ADAF00D38A36 /* BellMedia */ = {
 			isa = PBXGroup;
 			children = (
+				D18D81E82432EF710063429D /* Readme.txt */,
+				D13BABF92432C4E900D38A36 /* Model */,
 				D13BABDB2432ADAF00D38A36 /* AppDelegate.swift */,
 				D13BABDD2432ADAF00D38A36 /* SceneDelegate.swift */,
-				D13BABDF2432ADAF00D38A36 /* ViewController.swift */,
+				D13BABFA2432C4F400D38A36 /* Service */,
+				D13BABFB2432C51C00D38A36 /* Controller */,
+				D13BABFC2432C53700D38A36 /* Helpers */,
 				D13BABE12432ADAF00D38A36 /* Main.storyboard */,
 				D13BABE42432ADB400D38A36 /* Assets.xcassets */,
 				D13BABE62432ADB400D38A36 /* LaunchScreen.storyboard */,
 				D13BABE92432ADB400D38A36 /* Info.plist */,
 			);
 			path = BellMedia;
+			sourceTree = "<group>";
+		};
+		D13BABF92432C4E900D38A36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D13BABF72432C4D800D38A36 /* StreamModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D13BABFA2432C4F400D38A36 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D13BAC012432C6B100D38A36 /* NetworkFetcher.swift */,
+				D13BABFF2432C69C00D38A36 /* DataExtractor.swift */,
+				D13BAC032432C6F000D38A36 /* Fetcher.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D13BABFB2432C51C00D38A36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D13BABDF2432ADAF00D38A36 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D13BABFC2432C53700D38A36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D18D81E62432DB240063429D /* DateFormatter.swift */,
+				D13BABEF2432ADF100D38A36 /* Question1.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +180,7 @@
 			files = (
 				D13BABE82432ADB400D38A36 /* LaunchScreen.storyboard in Resources */,
 				D13BABE52432ADB400D38A36 /* Assets.xcassets in Resources */,
+				D18D81E92432EF710063429D /* Readme.txt in Resources */,
 				D13BABE32432ADAF00D38A36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18D81E72432DB240063429D /* DateFormatter.swift in Sources */,
 				D13BABE02432ADAF00D38A36 /* ViewController.swift in Sources */,
+				D13BAC042432C6F000D38A36 /* Fetcher.swift in Sources */,
+				D13BAC022432C6B100D38A36 /* NetworkFetcher.swift in Sources */,
 				D13BABDC2432ADAF00D38A36 /* AppDelegate.swift in Sources */,
 				D13BABDE2432ADAF00D38A36 /* SceneDelegate.swift in Sources */,
+				D13BAC002432C69C00D38A36 /* DataExtractor.swift in Sources */,
+				D13BABF02432ADF100D38A36 /* Question1.swift in Sources */,
+				D13BABF82432C4D800D38A36 /* StreamModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
